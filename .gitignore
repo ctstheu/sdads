@@ -1,22 +1,355 @@
-# Compiled class file
-*.class
+algoritmo "Dr.Diário"
+// Função :
+// Autor : Matheus Jeová Couto
+// Data : 03/09/2017
+// Seção de Declarações 
+var
+md : real
+login, senha, nomec, nomeu, email, datan, fd, dt1, na: caractere
+opcao, opcao1, avd1, amge, cfgo : inteiro
+diario, paciente : inteiro
+put1, put2, put3, put4: inteiro
+yes : logico
+inicio
+escreval("Dr. Diário é uma plataforma gratuita de bate-papo,")
+escreval("desenvolvida para as pessoas que procuram desabafar")
+escreval("ou ajudar a entender desabafos.")
+           escreval("")
+escreval("1 Para Diário ou 0 Para Paciente")
+            leia(opcao)
+se (opcao>1) entao
+          escreval("Opção Inválida!")
+senao
+     se(opcao=1) entao
+                 escreval("Para Logar Digite 1 ou Para Registrar-se Digite 0")
+                                leia(opcao1)
+                 se (opcao1>1) entao
+                    escreval("Opção Inválida!")
+                 senao
+                      se(opcao1=1) entao
+                                  escreval("Login")
+                                  escreva("E-mail/Username:")
+                                  leia(login)
+                                  escreva("Senha:")
+                                  leia(senha)
+                                  escreva("1 para logar-se: ")
+                                  leia(put1)
+                                           se(put1<>1) entao
+                                                      escreva("Opcão Inválida")
+                                           senao
+                                                se(put1=1) entao
+                                                           escreval("Bem-vindo de volta!")
+                                                           escreva("Ficar Disponivel: ")
+                                                           leia(fd)
+                                                           se (fd<>yes) entao
+                                                              escreval("Opção Inválida!")
+                                                           senao
+                                                                escreval("Buscando Pacientes..")
+                                                                escreval("Foram encontrados 0 Pacientes")
+                                                           fimse
+                                                           escreval("Foto e Nome")
+                                                           escreval("Score e Online Players")
+                                                           
+                                                           escreval("1 = Meus Pacientes")
+                                                           escreval("2 = Classificação")
+                                                           escreval("3 = Minha Disponibilidade")
+                                                           escreval("4 = Amigos")
+                                                           escreval("5 = Configurações")
+                                                           escreval("Couto Inc. Todos os direitos reservados.")
+                                                           leia(avd1)
+                                                                     se(avd1=1) entao
+                                                                                escreval("Meus Pacientes")
+                                                                                escreva("Ainda não marcaram horários contigo.")
+                                                                     senao
+                                                                          se(avd1=2) entao
+                                                                                     escreval("Classificação")
 
-# Log file
-*.log
+                                                                                     escreval("Tabela Mundial")
+                                                                                     escreval("|Posição|Nome|Pontos|")
 
-# BlueJ files
-*.ctxt
+                                                                                     escreval("Tabela Nacional")
+                                                                                     escreval("|Posição|Nome|Pontos|")
+                                                                          senao
+                                                                               se(avd1=3) entao
+                                                                                          escreval("Minha Disponibilidade")
+                                                                                                          escreval("1 - Agendados")
+                                                                                                          escreval("2 - Criar de Horário")
+                                                                                                          leia(md)
+                                                                                                          se(md>2) entao
+                                                                                                                   escreval("Opção Inválida!")
+                                                                                                          senao
+                                                                                                               se(md<1) entao
+                                                                                                                        escreval("Opção Inválida!")
+                                                                                                               senao
+                                                                                                                    se(md=1) entao
+                                                                                                                             escreval("Agendados")
+                                                                                                                             escreval("Você ainda não tem horários agendados!")
+                                                                                                                    senao
+                                                                                                                         se(md=2) entao
+                                                                                                                                  escreval("Criar de Horário")
+                                                                                                                                  escreva("Data: ")
+                                                                                                                                  leia(dt1)
+                                                                                                                                  escreva("Horário: ")
+                                                                                                                                  leia(h1)
+                                                                                                                                  escreval("Disponibilidade agendada com sucesso!")
+                                                                                                                         fimse
+                                                                                                                    fimse
+                                                                                                               fimse
+                                                                                                          fimse
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
 
-# Package Files #
-*.jar
-*.war
-*.ear
-*.zip
-*.tar.gz
-*.rar
+                                                                               senao
+                                                                                    se(avd1=4) entao
+                                                                                             escreval("Amigos")
+                                                                                             escreval("1 - Lista de Amigos")
+                                                                                             escreval("2 - Adicionar Amigos")
+                                                                                             leia(amge)
+                                                                                             se(amge>2) entao
+                                                                                                        escreval("Opção Inválida!")
+                                                                                             senao
+                                                                                                  se(amge<1) entao
+                                                                                                             escrevaL("Opção Inválida!")
+                                                                                                  senao
+                                                                                                       se(amge=1) entao
+                                                                                                                  escreval("Lista de Amigos")
+                                                                                                                  escreva("Você ainda não tem amigos!")
+                                                                                                       senao
+                                                                                                            se(amge=2) entao
+                                                                                                                       escreval("Adicionar Amigos")
+                                                                                                                       escreva("Digite o nome: ")
+                                                                                                                       leia(na)
+                                                                                                                       escreval("Buscando usuários com esse nome..")
+                                                                                                                       escreval("Nenhum usuário com este nome!")
+                                                                                                                       escreval("Deseja retornar?")
+                                                                                                            fimse
+                                                                                                       fimse
+                                                                                                  fimse
+                                                                                             fimse
+                                                                                    senao
+                                                                                         se(avd1=5) entao
+                                                                                                    escreval("Configurações")
+                                                                                                    escreval("1 - Perfil")
+                                                                                                    escreval("2 - Privacidade")
+                                                                                                    escreval("3 - Segurança")
+                                                                                                    escreval("4 - Transição")
+                                                                                                    leia(cfgo)
+                                                                                                    se(cfgo<1) entao
+                                                                                                               escreval("Opção Inválida")
+                                                                                                    senao
+                                                                                                         se(cfgo>4) entao
+                                                                                                                    escreval("Opção Inválida")
+                                                                                                         senao
+                                                                                                              se(cfgo=1) entao
+                                                                                                                         escreval("Perfil")
+                                                                                                                         escreval("Foto e Nome")
+                                                                                                              senao
+                                                                                                                   se(cfgo=2) entao
+                                                                                                                              escreval("Privacidade")
+                                                                                                                              escreval("...")
+                                                                                                                   senao
+                                                                                                                        se(cfgo=3) entao
+                                                                                                                                   escreval("Segurança")
+                                                                                                                                   escreval("...")
+                                                                                                                        senao
+                                                                                                                             se(cfgo=4) entao
+                                                                                                                                        escreval("Transição")
+                                                                                                                                        escreval("...")
+                                                                                                                             fimse
+                                                                                                                        fimse
+                                                                                                                   fimse
+                                                                                                              fimse
+                                                                                                         fimse
+                                                                                                    fimse
+                                                                                         fimse
+                                                                                    fimse
+                                                                               fimse
+                                                                          fimse
+                      senao(opcao1=0) entao
+                                  escreval("Registro")
+                                  escreva("Nome Completo:")
+                                  leia(nomec)
+                                  escreva("Nome de Usuário:")
+                                  leia(nomeu)
+                                  escreva("Data de Nascimento:")
+                                  leia(datan)
+                                  escreva("E-mail:")
+                                  leia(email)
+                                  escreva("Senha:")
+                                  leia(senha)
+                                  escreva("1 para registrar-se: ")
+                                  leia(put1)
+                                            se(put1<>1) entao
+                                                      escreva("Opcão Inválida")
+                                           senao
+                                                se(put1=1) entao
+                                                           escreval("Bem-vindo, então você sabe")
+                                                           escreval("quer mesmo ser um diário?")
+                                                           escreval("Então faça um teste para")
+                                                           escreval("saber-mos se você realmente")
+                                                           escreval("está àpto a entender as pessoas.")
+                                                           escreva("Ficar Disponivel: ")
+                                                           leia(fd)
+                                                           se (fd<>yes) entao
+                                                              escreval("Opção Inválida!")
+                                                           senao
+                                                                escreval("Buscando Pacientes..")
+                                                                escreval("Foram encontrados 0 Pacientes")
+                                                           fimse
+                                                           escreval("Foto e Nome")
+                                                           escreval("Score e Online Players")
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+                                                           escreval("1 = Meus Pacientes")
+                                                           escreval("2 = Classificação")
+                                                           escreval("3 = Minha Disponibilidade")
+                                                           escreval("4 = Amigos")
+                                                           escreval("5 = Configurações")
+                                                           escreval("Couto Inc. Todos os direitos reservados.")
+                                                           leia(avd1)
+                                                                     se(avd1=1) entao
+                                                                                escreval("Meus Pacientes")
+                                                                                escreva("Ainda não marcaram horários contigo.")
+                                                                     senao
+                                                                          se(avd1=2) entao
+                                                                                     escreval("Classificação")
+
+                                                                                     escreval("Tabela Mundial")
+                                                                                     escreval("|Posição|Nome|Pontos|")
+
+                                                                                     escreval("Tabela Nacional")
+                                                                                     escreval("|Posição|Nome|Pontos|")
+                                                                          senao
+                                                                               se(avd1=3) entao
+                                                                                          escreval("Minha Disponibilidade")
+                                                                                                          escreval("1 - Agendados")
+                                                                                                          escreval("2 - Criar de Horário")
+                                                                                                          leia(md)
+                                                                                                          se(md>2) entao
+                                                                                                                   escreval("Opção Inválida!")
+                                                                                                          senao
+                                                                                                               se(md<1) entao
+                                                                                                                        escreval("Opção Inválida!")
+                                                                                                               senao
+                                                                                                                    se(md=1) entao
+                                                                                                                             escreval("Agendados")
+                                                                                                                             escreval("Você ainda não tem horários agendados!")
+                                                                                                                    senao
+                                                                                                                         se(md=2) entao
+                                                                                                                                  escreval("Criar de Horário")
+                                                                                                                                  escreva("Data: ")
+                                                                                                                                  leia(dt1)
+                                                                                                                                  escreva("Horário: ")
+                                                                                                                                  leia(h1)
+                                                                                                                                  escreval("Disponibilidade agendada com sucesso!")
+                                                                                                                         fimse
+                                                                                                                    fimse
+                                                                                                               fimse
+                                                                                                          fimse
+
+
+                                                                               senao
+                                                                                    se(avd1=4) entao
+                                                                                             escreval("Amigos")
+                                                                                             escreval("1 - Lista de Amigos")
+                                                                                             escreval("2 - Adicionar Amigos")
+                                                                                             leia(amge)
+                                                                                             se(amge>2) entao
+                                                                                                        escreval("Opção Inválida!")
+                                                                                             senao
+                                                                                                  se(amge<1) entao
+                                                                                                             escrevaL("Opção Inválida!")
+                                                                                                  senao
+                                                                                                       se(amge=1) entao
+                                                                                                                  escreval("Lista de Amigos")
+                                                                                                                  escreva("Você ainda não tem amigos!")
+                                                                                                       senao
+                                                                                                            se(amge=2) entao
+                                                                                                                       escreval("Adicionar Amigos")
+                                                                                                                       escreva("Digite o nome: ")
+                                                                                                                       leia(na)
+                                                                                                                       escreval("Buscando usuários com esse nome..")
+                                                                                                                       escreval("Nenhum usuário com este nome!")
+                                                                                                                       escreval("Deseja retornar?")
+                                                                                                            fimse
+                                                                                                       fimse
+                                                                                                  fimse
+                                                                                             fimse
+                                                                                    senao
+                                                                                         se(avd1=5) entao
+                                                                                                    escreval("Configurações")
+                                                                                                    escreval("1 - Perfil")
+                                                                                                    escreval("2 - Privacidade")
+                                                                                                    escreval("3 - Segurança")
+                                                                                                    escreval("4 - Transição")
+                                                                                                    leia(cfgo)
+                                                                                                    se(cfgo<1) entao
+                                                                                                               escreval("Opção Inválida")
+                                                                                                    senao
+                                                                                                         se(cfgo>4) entao
+                                                                                                                    escreval("Opção Inválida")
+                                                                                                         senao
+                                                                                                              se(cfgo=1) entao
+                                                                                                                         escreval("Perfil")
+                                                                                                                         escreval("Foto e Nome")
+                                                                                                              senao
+                                                                                                                   se(cfgo=2) entao
+                                                                                                                              escreval("Privacidade")
+                                                                                                                              escreval("...")
+                                                                                                                   senao
+                                                                                                                        se(cfgo=3) entao
+                                                                                                                                   escreval("Segurança")
+                                                                                                                                   escreval("...")
+                                                                                                                        senao
+                                                                                                                             se(cfgo=4) entao
+                                                                                                                                        escreval("Transição")
+                                                                                                                                        escreval("...")
+                                                                                                                             fimse
+                                                                                                                        fimse
+                                                                                                                   fimse
+                                                                                                              fimse
+                                                                                                         fimse
+                                                                                                    fimse
+                                                                                         fimse
+                                                                                    fimse
+                                                                               fimse
+                                                                          fimse
+                      FIMSE
+                 fimse
+     senao(opcao=0) entao
+                    escreval("Para Logar Digite 1 ou Para Registrar-se Digite 0")
+                                leia(opcao1)
+                 se (opcao1>1) entao
+                    escreval("Opção Inválida!")
+                 senao
+                      se(opcao1=1) entao
+                                  escreval("Login")
+                                  escreva("E-mail/Username:")
+                                  leia(login)
+                                  escreva("Senha:")
+                                  leia(senha)
+                                  escreva("1 para logar-se: ")
+                                  leia(put3)
+                      senao(opcao1=0) entao
+                                  escreval("Registro")
+                                  escreva("Nome Completo:")
+                                  leia(nomec)
+                                  escreva("Nome de Usuário:")
+                                  leia(nomeu)
+                                  escreva("Data de Nascimento:")
+                                  leia(datan)
+                                  escreva("E-mail:")
+                                  leia(email)
+                                  escreva("Senha:")
+                                  leia(senha)
+                                  escreva("1 para registrar-se: ")
+                                  leia(put4)
+                      fimse
+                 fimse
+       FIMSE
+ fimse
+ FIMSE
+FIMSE
+FIMSE
+FIMSE
+FIMSE
+FIMSE
+fimalgoritmo
